@@ -4,13 +4,13 @@
 
 Using [marvelapp.com](https://marvelapp.com) we design this basic mockup.
 
-![UI Design](./media/design.png)
+![UI Design](./docs/media/design.png)
 
 ## Class diagram
 
 Using [draw.io](https://draw.io) we design a this diagram.
 
-![Diagram](./media/diagram.svg)
+![Diagram](./docs/media/diagram.svg)
 
 ## Tasks
 
