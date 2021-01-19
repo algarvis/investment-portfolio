@@ -8,6 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Portfolios } from '../Portfolios/Portfolios';
 
 const { Header, Content, Footer } = Layout;
 
@@ -19,22 +20,21 @@ class App extends React.Component {
         <Layout>
           <Header>
             <div className="logo" />
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-              <Menu.Item key="3"><Link to="/topics">nav 3</Link></Menu.Item>
-              <Menu.Item key="2"><Link to="/about">nav 2</Link></Menu.Item>
-              <Menu.Item key="1"><Link to="/">nav 1</Link></Menu.Item>
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['portfolios']}>
+              <Menu.Item key="portfolios"><Link to="/portfolios">Portfolios</Link></Menu.Item>
+              <Menu.Item key="assets"><Link to="/assets">Assets</Link></Menu.Item>
             </Menu>
           </Header>
           <Content>
             <Switch>
-              <Route path="/about">
-                ABOUT
+              <Route path="/portfolios">
+                <Portfolios />
               </Route>
-              <Route path="/topics">
-                TOPIS
+              <Route path="/assets">
+                assets
               </Route>
               <Route path="/">
-                HOME
+                404 not found
               </Route>
             </Switch>
           </Content>
