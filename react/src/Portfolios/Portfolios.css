@@ -1,3 +1,7 @@
 .ip-table-actions {
   padding-bottom: 24px;
 }
+
+tbody tr {
+  cursor: pointer;
+}

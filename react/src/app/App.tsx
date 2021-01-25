@@ -8,7 +8,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Portfolios } from '../Portfolios/Portfolios';
+import Portfolios from '../Portfolios/Portfolios';
+import PortfolioDetails from '../PortfolioDetails/PortfolioDetails';
 
 const { Header, Content, Footer } = Layout;
 
@@ -25,19 +26,22 @@ class App extends React.Component {
               <Menu.Item key="assets"><Link to="/assets">Assets</Link></Menu.Item>
             </Menu>
           </Header>
-          <Content>
-            <Switch>
-              <Route path="/portfolios">
+          <Switch>
+            <Route path="/portfolios/:portfolioId">
+              <PortfolioDetails />
+            </Route>
+            <Route path="/portfolios">
+              <Content>
                 <Portfolios />
+              </Content>
+            </Route>
+            <Route path="/assets">
+              assets
               </Route>
-              <Route path="/assets">
-                assets
+            <Route path="/">
+              404 not found
               </Route>
-              <Route path="/">
-                404 not found
-              </Route>
-            </Switch>
-          </Content>
+          </Switch>
           <Footer style={{ textAlign: 'center' }}>Investment Portfolio ©2021 Created by Algarvis</Footer>
         </Layout >
       </Router >

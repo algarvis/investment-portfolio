@@ -1,20 +1,11 @@
-import './Portfolios.css';
-import { Table, Tag, Button } from 'antd';
+import './PortfolioMovements.css';
+import { Table, Tag, Button, Layout } from 'antd';
 import React from 'react';
 import { PlusCircleOutlined } from '@ant-design/icons';
-import { useHistory } from 'react-router-dom';
 
-interface Portfolio {
-  name: string;
-  description: string;
-  totalInvested: number;
-  totalValue: number;
-  tags: string[];
-}
+const { Content } = Layout;
 
-const Portfolios = () => {
-
-  const history = useHistory();
+const PortfolioMovements = () => {
 
   const columns = [
     {
@@ -59,7 +50,7 @@ const Portfolios = () => {
     },
   ];
 
-  const data: Portfolio[] = [
+  const data: any[] = [
     {
       name: 'Crypto',
       description: 'Daily trading with high risk crypto',
@@ -84,25 +75,18 @@ const Portfolios = () => {
   ];
 
   return (
-    <div id="portfolios-container">
-      <div className="ip-table-actions">
-        <Button type="primary" icon={<PlusCircleOutlined />}>
-          Create new Portfolio
+    <Content>
+      <div id="portfolios-container">
+        <div className="ip-table-actions">
+          <Button type="primary" icon={<PlusCircleOutlined />}>
+            Add movement
           </Button>
+        </div >
+
+        <Table columns={columns} dataSource={data} />
       </div >
-
-      <Table columns={columns} dataSource={data} onRow={(record, rowIndex) => {
-        return {
-          onClick: event => { history.push('/portfolios/123') }, // click row
-          onDoubleClick: event => { }, // double click row
-          onContextMenu: event => { }, // right button click row
-          onMouseEnter: event => { }, // mouse enter row
-          onMouseLeave: event => { }, // mouse leave row
-        };
-      }} />
-    </div >
+    </Content>
   );
-
 }
 
-export default Portfolios;
+export default PortfolioMovements
