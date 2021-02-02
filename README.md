@@ -32,3 +32,16 @@ Using the [Github projects page](https://github.com/algarvis/investment-portfoli
 **Backend:** We will ne using python3 Django with the Django Rest Framework.
 
 **Hosting:** Not the current priority but eventually we will try to host it using Google Cloud.
+
+
+## Setup Django to run locally
+
+First make sure you have python3 installed on your machine.
+
+```
+$ cd djano
+$ python3 -m venv env
+$ source env/bin/activate  # On Windows use `env\Scripts\activate`
+$ pip install -r requirements.txt
+$ python .\manage.py runserver
+```
