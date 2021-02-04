@@ -42,7 +42,6 @@ class App extends React.Component {
               404 not found
               </Route>
           </Switch>
-          <Footer style={{ textAlign: 'center' }}>Investment Portfolio ©2021 Created by Algarvis</Footer>
         </Layout >
       </Router >
     );

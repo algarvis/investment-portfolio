@@ -88,7 +88,7 @@ const Portfolios = () => {
       <div className="ip-table-actions">
         <Button type="primary" icon={<PlusCircleOutlined />}>
           Create new Portfolio
-          </Button>
+        </Button>
       </div >
 
       <Table columns={columns} dataSource={data} onRow={(record, rowIndex) => {

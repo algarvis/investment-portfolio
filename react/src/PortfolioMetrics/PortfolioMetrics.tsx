@@ -1,140 +1,46 @@
 import './PortfolioMetrics.css';
 import React from 'react';
-import { Card, Avatar } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-
-const { Meta } = Card;
+import { Card, Row, Col } from 'antd';
+import DemoArea from '../DemoArea/DemoArea';
+import DemoPie from '../DemoPie/DemoPie';
+import DemoGauge from '../DemoGauge/DemoGauge';
+import DemoLiquid from '../DemoLiquid/DemoLiquid';
 
 
 const PortfolioMetrics = () => {
 
   return (
-    <>
-      <div style={{ display: 'flex' }}>
-        <Card
-          style={{ width: 300 }}
-          cover={
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
-        >
-          <Meta
-            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-            title="Card title"
-            description="This is the description"
-          />
-        </Card>
-        <Card
-          style={{ width: 300 }}
-          cover={
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
-        >
-          <Meta
-            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-            title="Card title"
-            description="This is the description"
-          />
-        </Card>
-        <Card
-          style={{ width: 300 }}
-          cover={
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
-        >
-          <Meta
-            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-            title="Card title"
-            description="This is the description"
-          />
-        </Card>
-      </div>
-      <div style={{ display: 'flex' }}>
-        <Card
-          style={{ width: 300 }}
-          cover={
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
-        >
-          <Meta
-            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-            title="Card title"
-            description="This is the description"
-          />
-        </Card>
-        <Card
-          style={{ width: 300 }}
-          cover={
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
-        >
-          <Meta
-            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-            title="Card title"
-            description="This is the description"
-          />
-        </Card>
-        <Card
-          style={{ width: 300 }}
-          cover={
-            <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-            />
-          }
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />,
-          ]}
-        >
-          <Meta
-            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-            title="Card title"
-            description="This is the description"
-          />
-        </Card>
-      </div>
-    </>
+    <div style={{ overflow: 'auto' }}>
+      <Row gutter={16}>
+        <Col span={8}>
+          <Card title="Target objective" bordered={false}>
+            <DemoLiquid></DemoLiquid>
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card title="Vromm vrrrommm" bordered={false}>
+            <DemoGauge></DemoGauge>
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card title="BTC price over time" extra={<a href="#">More</a>}>
+            <DemoArea></DemoArea>
+          </Card>
+        </Col>
+      </Row>
+      <Row gutter={16}>
+        <Col span={8}>
+          <Card title="Assets things">
+            <DemoPie></DemoPie>
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card title="BTC price over time" extra={<a href="#">More</a>}>
+            <DemoArea></DemoArea>
+          </Card>
+        </Col>
+      </Row>
+    </div>
   );
 }
 
