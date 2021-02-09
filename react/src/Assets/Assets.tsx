@@ -5,7 +5,7 @@ import { ColumnsType } from 'antd/lib/table';
 import { Content } from 'antd/lib/layout/layout';
 import { DownOutlined } from '@ant-design/icons';
 
-enum AssetType {
+export enum AssetType {
   stock,
   etf,
   crypto,
@@ -14,7 +14,7 @@ enum AssetType {
   thingIdontRemenber
 }
 
-interface Asset {
+export interface Asset {
   icon?: string;
   name: string;
   price: number;
@@ -24,7 +24,6 @@ interface Asset {
   weekChange: number;
   marketCap: number;
 }
-
 
 const { Search } = Input;
 

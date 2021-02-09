@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { PageHeader, Tabs, Button } from 'antd';
 import PortfolioMetrics from '../PortfolioMetrics/PortfolioMetrics';
 import PortfolioMovements from '../PortfolioMovements/PortfolioMovements';
+import PortfolioAssets from '../PortfolioAssets/PortfolioAssets';
 
 
 const { TabPane } = Tabs;
@@ -29,12 +30,13 @@ const PortfolioDetails = () => {
         footer={
           <Tabs defaultActiveKey="1" onChange={callback}>
             <TabPane tab="Metrics" key="1" />
-            <TabPane tab="Movements" key="2" />
+            <TabPane tab="Assets" key="2" />
+            <TabPane tab="Movements" key="3" />
           </Tabs>
         }
       ></PageHeader>
 
-      {tab === '1' ? <PortfolioMetrics></PortfolioMetrics> : <PortfolioMovements></PortfolioMovements>}
+      {tab === '1' ? <PortfolioMetrics /> : (tab === '2' ? <PortfolioAssets /> : <PortfolioMovements />)}
 
     </>
   );
