@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Pie } from '@ant-design/charts';
 import { PieConfig } from '@ant-design/charts/es/pie';
 
 const DemoPie: React.FC = () => {
-  var data = [
+  const data = [
     {
       type: '分类一',
       value: 27,
@@ -39,7 +39,7 @@ const DemoPie: React.FC = () => {
       type: 'inner',
       offset: '-30%',
       content: (_ref) => {
-        var percent = _ref.percent;
+        const percent = _ref.percent;
         return ''.concat((percent * 100).toString(), '%');
       },
       style: {

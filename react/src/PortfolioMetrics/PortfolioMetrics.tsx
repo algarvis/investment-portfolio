@@ -23,7 +23,7 @@ const PortfolioMetrics = () => {
           </Card>
         </Col>
         <Col span={8}>
-          <Card title="BTC price over time" extra={<a href="#">More</a>}>
+          <Card title="BTC price over time" extra={<a href="https://www.google.com">More</a>}>
             <DemoArea></DemoArea>
           </Card>
         </Col>

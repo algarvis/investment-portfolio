@@ -4,7 +4,7 @@ import { LiquidConfig } from '@ant-design/charts/es/liquid';
 
 const DemoLiquid: React.FC = () => {
   const [percent, setPercent] = useState(0.26);
-  let ref: any;
+
   const config: LiquidConfig = {
     percent,
     statistic: {
@@ -51,7 +51,7 @@ const DemoLiquid: React.FC = () => {
     }, 500);
   }, []);
 
-  return <Liquid {...config} chartRef={(chartRef) => (ref = chartRef)} />;
+  return <Liquid {...config} />;
 };
 
 export default DemoLiquid;

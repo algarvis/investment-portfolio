@@ -3,15 +3,15 @@ import { Gauge } from '@ant-design/charts';
 import { GaugeConfig } from '@ant-design/charts/es/gauge';
 
 const DemoGauge: React.FC = () => {
-  var [percent, setPercent] = useState(0.2);
-  var [rangeColor, setRangeColor] = useState('#F4664A');
-  var color = ['#F4664A', '#FAAD14', '#30BF78'];
-  var ref;
 
-  var getColor = (percent: number) => {
+  const [percent, setPercent] = useState(0.2);
+  const [rangeColor, setRangeColor] = useState('#F4664A');
+  const color = ['#F4664A', '#FAAD14', '#30BF78'];
+
+  const getColor = (percent: number) => {
     return percent < 0.4 ? color[0] : percent < 0.6 ? color[1] : color[2];
   };
-  var config: GaugeConfig = {
+  const config: GaugeConfig = {
     percent,
     range: { color: rangeColor },
     indicator: {
@@ -29,7 +29,7 @@ const DemoGauge: React.FC = () => {
     statistic: {
       content: {
         formatter: (_ref: any) => {
-          var percent = _ref.percent;
+          const percent = _ref.percent;
           return 'Rate: '.concat((percent * 100).toFixed(0), '%');
         },
       },
@@ -37,8 +37,8 @@ const DemoGauge: React.FC = () => {
     animation: false,
   };
   useEffect(() => {
-    var data = percent;
-    var interval = setInterval(function () {
+    let data = percent;
+    const interval = setInterval(function () {
       if (data >= 0.85) {
         clearInterval(interval);
       } else {
@@ -49,7 +49,7 @@ const DemoGauge: React.FC = () => {
     }, 500);
   }, []);
 
-  return <Gauge style={{ fontSize: 60 }} {...config} chartRef={(chartRef) => (ref = chartRef)} />;
+  return <Gauge style={{ fontSize: 60 }} {...config} />;
 };
 
 export default DemoGauge;

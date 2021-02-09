@@ -10,8 +10,9 @@ import {
 } from "react-router-dom";
 import Portfolios from '../Portfolios/Portfolios';
 import PortfolioDetails from '../PortfolioDetails/PortfolioDetails';
+import Assets from '../Assets/Assets';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 class App extends React.Component {
 
@@ -36,8 +37,8 @@ class App extends React.Component {
               </Content>
             </Route>
             <Route path="/assets">
-              assets
-              </Route>
+              <Assets />
+            </Route>
             <Route path="/">
               404 not found
               </Route>
