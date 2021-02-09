@@ -1,4 +1,8 @@
 .ant-card {
-  margin: 20px;
   flex: 1;
+  min-width: 400px;
+}
+
+.ant-col {
+  min-width: 400px;
 }
