@@ -37,6 +37,7 @@ Using the [Github projects page](https://github.com/algarvis/investment-portfoli
 ## Setup Django to run locally
 
 First make sure you have python3 installed on your machine.
+Make a copy of the ```investment_portfolio/settings/exemple.py``` called ```local.py``` and fill the settings with the correct values.
 
 ```
 $ cd djano
