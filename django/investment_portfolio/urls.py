@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from quickstart.api import viewsets as userviewsets
+# from quickstart import views
 
 route = routers.DefaultRouter()
 
@@ -25,4 +26,5 @@ route.register(r'users/', userviewsets.UsersViewSet, basename="Users")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(route.urls))
+    # path(r'test/', views.test)
 ]
