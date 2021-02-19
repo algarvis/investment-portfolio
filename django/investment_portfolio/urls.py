@@ -21,7 +21,14 @@ from quickstart.api import viewsets as userviewsets
 
 route = routers.DefaultRouter()
 
-route.register(r'users/', userviewsets.UsersViewSet, basename="Users")
+route.register(r'portfolios', userviewsets.PortfolioViewSet,
+               basename="Portfolios")
+
+route.register(r'assets', userviewsets.AssetViewSet,
+               basename="Assets")
+
+route.register(r'transactions', userviewsets.TransactionViewSet,
+               basename="Transactions")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
